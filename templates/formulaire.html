@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prédiction_ciblée</title>
+
+<style>
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.texte0 {
+    font-size:20px;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 110px;
+    padding-top: 0px;
+    color: white;
+    opacity: 70%;
+    position: absolute;
+}
+
+.texte0:hover {
+  opacity: 100%;
+}
+
+.déco {
+    color: white;
+    display: inline; 
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+.en-tête {
+    margin-top: -20px;
+    align-items: center;
+    width: 1000px;
+    margin-left: 250px;
+    padding-top: 0px;
+}
+
+.texte1 {
+    font-size:50px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #ffffff;
+    opacity: 100%;
+}
+
+.defile {
+    position:absolute;
+    width:50%;
+    height:7%;
+    margin-left: 350px;
+    margin-top: -40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.acceuil  {  
+    width: 100px;
+    height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-top: 0px;
+    display: flex;
+}
+
+.acceuil:hover {
+  margin-left: 60px;
+}
+
+.hyperspan2 {
+    position:absolute;
+    width:25%;
+    height:10%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.icone0 {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 50px;  
+    opacity: 70%;
+}
+
+.icone0:hover {
+  opacity: 100%;
+}
+
+.contenu {
+   
+    margin-top: 40px;
+    margin-left: 40px;
+    background-color:;
+    opacity: 100%;
+    height: 45px;  
+}
+
+.formulaire {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 70%;
+  height: 65%;
+  margin-left: 15%;
+  margin-top: 5%;
+  border-radius: 25%;
+  padding-top: 0px;
+  position: relative;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows:auto auto;
+  grid-row-gap: 20px;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 15%;
+  width: 300px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 15%;
+  width: 400px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 270px;
+  grid-column-start:1 ;
+  grid-column-end:4;
+}
+
+.grid-item8 {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 5%;
+  width: 280px;
+  height: 90px;
+  margin-top: 30px;
+  margin-left: 340px;
+  grid-column-start:1 ;
+  grid-column-end:4;
+}
+
+.renseignement {
+  background-color: rgb(219, 219, 219);
+  color: rgb(119, 119, 119);
+  width: 100%;
+  height: 85%;
+  border-radius: 15%;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  font-size: 50%;
+  text-align: center;
+}
+
+.renseignement:hover {
+  background-color: white;
+  border-color: rgb(228, 229, 230);
+}
+
+.details {
+  color: #ffffff;
+}
+
+input[type=text], select {
+          text-align: center;
+          text-align-last: center;
+}
+
+
+.forme{
+    width: 200px;
+    height: 100px;
+    margin-left: 1335px;
+    margin-top: -50px;
+	border-radius: 5% 0% 4% 94%;
+}
+
+
+
+.i {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.hyperspan4 {
+    position:absolute;
+    background-color: rgba(228, 230, 139, 0.5);
+    border-radius: 5% 0% 4% 94%;
+    width: 210px;
+    height: 160px;
+    margin-left: -10px;
+    margin-top: -50px;
+
+}
+
+.hyperspan4:hover {
+    background-color: rgba(77, 62, 158, 0.4);
+    margin-left: -10px;
+    width: 210px;
+}
+
+</style>
+
+
+<link rel="stylesheet" href="">
+    
+</head>
+<body class ="déco" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 45%)), url(../static/image/fonds.jpg); background-size: cover;">
+  
+                          <div class="acceuil">
+                              <a href="/">
+                                  <span class="hyperspan2"></span>
+                                  <img src="../static/image/acceuil.png" class="icone0">
+                              </a>
+                              <p class="texte0">Cliquez ici pour revenir à l'acceuil</p>
+                          </div>
+                          <div class="forme"> <a href="/"> <span class="hyperspan4"></span> </a> <p class="i">i</p>  </div>
+
+
+                          <div class="en-tête">
+                              <p class="texte1">Prédir le futur statut d'un nouvel abonné ici</p>
+                          </div>
+                          
+
+                          <div class="defile">
+                              <marquee behavior="scroll"  width="770" scrollamount="6" style="color: rgb(0, 247, 255);  background-color: rgba(162, 163, 151, 0.4); font-size: 25px; border:5px solid rgb(165, 165, 165); border-radius: 50px;"> " Entrer les informations de votre nouveau client et verifier si celui-ci restera abonner au service de carte prépayé "</marquee>
+                          </div>
+                          
+          <form action="{{url_for('predict')}}" method="POST" class="formulaire"> 
+            
+                <div class="grid-container">
+                  <div class="grid-item1">
+                    <span>Catégorie de carte</span>
+                              <select class="renseignement" name="catégorie" style="color: rgb(118, 118, 118); " required>
+                                <option>Sélectioner la catégorie de la carte ici</option>
+                                <option value="0">Blue</option>
+                                <option value="1">Silver</option>High school
+                                <option value="2">Gold</option>
+                                <option value="3">Platinium</option>
+                              </select>
+                  </div>
+                  <div class="grid-item">
+                              <span class="details">Limite de credit</span>
+                              <input class="renseignement" type="text" name="limite" placeholder="Entrer la limite de credit ici" required>
+                  </div>
+                              <div class="grid-item">
+                                <span class="details">Entrer le genre ici</span>
+                                          <select class="renseignement" name="genre" style="color: rgb(118, 118, 118)" required>
+                                            <option>Sélectioner le genre ici</option>
+                                            <option value="0">Femme</option>
+                                            <option value="1">Homme</option>High school
+                                            </select>
+                              </div>  
+
+                            <div class="grid-item">
+                              <span class="details">âge</span>
+                              <input class="renseignement" type="text" name="âge" placeholder="entrer l'âge ici" required>
+                            </div>
+
+                            <div class="grid-item">
+                              <span class="details">Niveau de revenu</span>
+                                        <select class="renseignement" name="revenu" style="color: rgb(118, 118, 118)" required>
+                                          <option>Sélectioner le niveau de revenu ici</option>
+                                          <option value="0">moins de 40000 USD</option>
+                                          <option value="1">40000 USD - 60000 USD</option>High school
+                                          <option value="2">60000 USD - 80000 USD</option>
+                                          <option value="3">80000 USD - 120000 USD</option>
+                                          <option value="4">Plus de 120000 USD</option>
+                                          </select>
+                            </div>
+
+                            <div class="grid-item">
+                            <span class="details">taux moyen d'utilisation</span>
+                            <input class="renseignement" type="text" name="utilisation" placeholder="Entrer le taux moyen d'utilisation de la carte ici" required>
+                            </div>  
+                            <div class="grid-item">
+                              <span class="details">Niveau d'étude</span>
+                                        <select class="renseignement" name="étude"  style="color: rgb(118, 118, 118)"  required>
+                                          <option>Sélectioner le niveau d'étude ici</option>
+                                          <option value="0">Uneducated</option>
+                                          <option value="1">College</option>High school
+                                          <option value="2">High school</option>
+                                          <option value="3">Graduate</option>
+                                          <option value="4">Post-Graduate</option>
+                                          <option value="5">Doctorate</option>
+                                          </select>
+                            </div>
+                  <div class="grid-item8">
+                    <input type="submit" class="renseignement" value="Cliquez ici pour prédire">
+                  </div>
+           
+                </div>
+
+          </form>
+</body>
+</html>

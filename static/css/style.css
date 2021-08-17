@@ -1,0 +1,180 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.hyperspan {
+    position:absolute;
+    width:19.5%;
+    height:33.5%;
+    margin-left: 0px;
+    opacity: 25%;
+}
+
+.hyperspan2 {
+    position:absolute;
+    width:10%;
+    height:10%;
+    margin-left: 40px;
+    margin-top: 10px;
+    opacity: 25%;
+}
+
+.nav {
+    background-color: rgba(75, 72, 72, 0.62);
+    width: 300px;
+    height: 250px;
+    margin-top: 60px;
+    margin-left: 220px;
+    border-color: rgba(255, 255, 255, 0.52);
+    border-radius: 60px;
+}
+
+
+
+.opacity {
+    opacity: 100%;
+}
+
+.nav2 {
+    background-color: rgba(75, 72, 72, 0.62);
+    width: 300px;
+    height: 250px;
+    margin-top: 60px;
+    margin-left: 90px;
+    border-style: solid;
+    border-width: 0px 0px;
+    border-color: rgba(255, 255, 255, 0.52);
+    border-radius: 30%;
+}
+
+.nav:hover, .nav2:hover, .nav3:hover {
+    cursor: pointer;
+    background-color: rgba(228, 227, 227,0.5) ;
+    
+}
+
+
+.nav3 {
+    background-color: rgba(75, 72, 72, 0.62);
+    width: 300px;
+    height: 250px;
+    margin-top: 60px;
+    margin-left: 90px;
+    border-style: solid;
+    border-width: 0px 0px;
+    border-color: rgba(255, 255, 255, 0.52);
+    border-radius: 60px;
+}
+
+.en-tête {
+    margin-top: 100px;
+    align-items: center;
+}
+
+.disposition {
+    display: flex;
+}
+
+.texte1 {
+    font-size:30px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #e4d912;
+    opacity: 100%;
+}
+
+.texte2 {
+    font-size:22px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 10px;
+    color: white;
+    opacity: 100%;
+}
+
+.texte0 {
+    font-size:20px;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 25px;
+    padding-top: 0px;
+    color: white;
+    opacity: 100%;
+    position:absolute;
+}
+
+h1 {
+    text-align: center;
+    font-size:110px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: -150px;
+    padding-top: 0px;
+    color: rgb(228, 227, 227);
+    opacity: 100%;
+    
+}
+
+.icone0 {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.icone1 {
+    width: 200px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.icone2 {
+    width:200px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.icone3 {
+    width:150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.corps {
+   
+}
+
+.déco {
+    color: white;
+    display: inline; 
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+
+       
+.acceuil  {  
+    width: 100px;
+    height: 150px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-top: 15px;
+    display: flex;
+}
+
+.defile {
+    position:absolute;
+    width:50%;
+    height:7%;
+    margin-left: 350px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}

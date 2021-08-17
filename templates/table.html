@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+<head>
+<title>Table des données</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />    
+<link href='https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script>src ="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"</script>
+
+<style>
+
+.red {
+  background-color: rgb(218, 71, 71) !important;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.déco {
+    color: white;
+    display: inline; 
+    background-size: 1600px 1000px;
+    background-repeat: no-repeat;  
+}
+.texte0 {
+    font-size:20px;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 110px;
+    padding-top: 0px;
+    color: white;
+    opacity: 70%;
+    position: absolute;
+}
+
+.texte0:hover {
+    opacity: 100%;
+}
+
+.hyperspan2 {
+    position:absolute;
+    width:25%;
+    height:10%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.icone0 {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 50px;
+    opacity: 70%;
+}
+
+.icone0:hover {
+    opacity: 100%;
+}
+
+.acceuil  {  
+    width: 100px;
+    height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-top: 0px;
+    display: flex;
+}
+
+.acceuil:hover {
+    margin-left: 75px;
+    opacity: 100%;
+}
+
+
+.tête {
+    text-align: center;
+    opacity: 70%;
+    margin-top: -80px;
+}
+
+.tête:hover {
+    opacity: 100%;
+}
+
+
+.forme{
+    width: 200px;
+    height: 100px;
+    margin-left: 1335px;
+    margin-top: 10px;
+	border-radius: 5% 0% 4% 94%;
+}
+
+
+
+.i {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.hyperspan4 {
+    position:absolute;
+    background-color: rgba(228, 230, 139, 0.5);
+    border-radius: 5% 0% 4% 94%;
+    width: 210px;
+    height: 160px;
+    margin-left: -10px;
+    margin-top: -50px;
+
+}
+
+.hyperspan4:hover {
+    background-color: rgba(77, 62, 158, 0.4);
+    margin-left: -10px;
+    width: 210px;
+}
+
+.page-item.active .page-link {
+    background-color: rgb(113, 113, 113) !important;
+    background: linear-gradient(90deg, rgba(113, 113, 113, 1) 5%, rgba(66, 66, 66, 1) 50%, rgba(113, 113, 113, 1) 95%) !important;
+    border-radius: 3px 3px 3px 3px;
+        -moz-border-radius: 3px 3px 3px 3px;
+        -webkit-border-radius: 3px 3px 3px 3px;
+        border: 1px solid #000000;
+        -webkit-box-shadow: inset 13px 14px 8px -8px rgba(148, 148, 148, 0.56);
+        -moz-box-shadow: inset 13px 14px 8px -8px rgba(148, 148, 148, 0.56);
+        box-shadow: inset 13px 14px 8px -8px rgba(148, 148, 148, 0.56);
+  font: bold;
+  font color: white !important;
+    
+}
+.page-link {
+    color: #A3A3A5 !important;
+  
+}
+.paginate_button:hover{
+  font color: white !important;
+  background: none;
+  color: black!important;
+}  
+
+
+.dataTables_paginate {
+    color: white;
+    
+}
+
+.dataTables_wrapper {
+    font-size: 16px;
+    color: white;
+    
+}
+
+.paginate_button {
+    background-color: rgba(165, 161, 161, 0.52);
+    font-weight: bold;  
+}
+
+
+.paginate_button.disabled:active{
+    color: white;
+}
+
+#table_previous{
+    color: red;
+    background-color: rgba(165, 161, 161, 0.52);
+}
+
+.dataTables_info input[type="text"] {
+    color: white;
+}
+
+.dataTables_filter label {
+    color: white;
+}
+
+
+.dataTables_length label {
+    color: white;
+    background-color: rgba(165, 161, 161, 0.52);
+}
+
+.dataTables_length option {
+    color: white;
+    background-color: rgba(165, 161, 161, 0.52);
+}
+
+.dataTables_info {
+    color: white;
+    font-weight: bold; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: wavy, dashed, dotted, double, solid, underline, line-through, overline;
+    text-decoration: overline underline wavy white;
+    background-color: rgba(165, 161, 161, 0.52);
+    font-size: 20px;
+}
+
+#table_next.paginate_button.next {
+    color: white;
+    background-color: rgba(21, 169, 196, 0.52);
+}
+
+#table_previous.paginate_button.previous {
+    color: white;
+    background-color: rgba(21, 169, 196, 0.52);
+}
+
+</style>
+
+</head>
+<body class ="déco" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 45%)), url(./static/image/fonds.jpg);">
+   
+    <div class="acceuil">
+        <a href="/">
+            <span class="hyperspan2"></span>
+            <img src="./static/image/acceuil.png" class="icone0">
+        </a>
+        <p class="texte0">Cliquez ici pour revenir à l'acceuil</p>
+    </div>
+    <div class="forme"> <a href="/"> <span class="hyperspan4"></span> </a> <p class="i">i</p>  </div>
+
+    <div class="container" >
+        <div class="row" style="padding:50px;">
+            <p><h1 class="tête">BASE DE DONNEE GENERALE</h1></p>
+            <div >
+                <table id='table' class="cell-border" class='display dataTable' width='100%'>
+                    <thead>
+                    <tr style="color: white;">
+                        <th>preds</th>
+                        <th>statut du client</th>
+                        <th>Age du client</th>
+                        <th>niveau d'éducation</th>
+                        <th>niveau de revenu</th>
+                        <th>catégorie de la carte</th>
+                        <th>limite de credit sur la carte</th>
+                        <th>taux moyen d'utilisation de la carte</th>
+                        <th>Genre</th>
+                    </tr>
+                    </thead>
+
+                    
+                    <tbody>
+                        {% for row in employee %}
+                        <tr style="color: black;">
+                            
+                            <td  class="man">{{row.preds}}</td>
+                            <td>{{row.Attrition_Flag}}</td>
+                            <td>{{row.Customer_Age}}</td>
+                            <td>{{row.Education_Level}}</td>
+                            <td>{{row.Income_Category}}</td>
+                            <td>{{row.Card_Category}}</td>
+                            <td>{{row.Credit_Limit}}</td>
+                            <td>{{row.Avg_Utilization_Ratio}}</td>
+                            <td>{{row.Gender}}</td>
+
+
+                        </tr>
+                        {% endfor %}
+
+                        
+                    </tbody>
+                </table>
+            </div>
+       </div>
+    </div>
+    <script> 
+         $(document).ready( function () {
+            $('#table').DataTable({
+                'lengthMenu': [[5, 10, -1], [5, 10, "All"]], dom: 'lBfrtip', buttons: [  'copy', 'csv', 'excel', 'pdf', 'print'],
+                searching:true, 
+                sort: false,
+ 
+
+                "createdRow": function( row, data, dataIndex){
+                if( data[0] != data[1]){
+                    $(row).css({backgroundColor: "rgb(218, 71, 71)"}); //.css ou . addclass et spécifier
+                }
+            }
+            });
+ 
+});
+        </script>
+</body>
+</html>

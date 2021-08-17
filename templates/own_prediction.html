@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prédiction_ciblée</title>
+
+<style>
+.container{
+  background-color: rgba(0, 0, 0, 1);
+}
+
+</style>
+
+
+<link rel="stylesheet" href="./static/css/main.css">
+    
+</head>
+<body class ="déco" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 45%)), url(./static/image/fonds.jpg); background-size: cover;">
+  <div class="general">
+    <div class="container">
+      <div class="title">Prédiction ciblée</div>
+        <div class="content">
+
+
+          <form action="{{url_for('predict')}}" method="POST"> 
+            <div class="user-details">
+
+                            <div class="input-box">
+                              <span class="details">âge</span>
+                              <input type="text" name="âge" placeholder="entrer l'âge ici" required>
+                            </div>
+
+
+                            <div class="input-box">
+                              <span class="details">Niveau d'étude</span>
+                              <select name="étude"  class="a"  style="color: rgb(118, 118, 118)"  required>
+                                <option>Sélectioner le niveau d'étude ici</option>
+                                <option value="0">Uneducated</option>
+                                <option value="1">College</option>High school
+                                <option value="2">High school</option>
+                                <option value="3">Graduate</option>
+                                <option value="4">Post-Graduate</option>
+                                <option value="5">Doctorate</option>
+                                </select>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Niveau de revenu</span>
+                              <select name="revenu"  class="a" style="color: rgb(118, 118, 118)" required>
+                                <option>Sélectioner le niveau de revenu ici</option>
+                                <option value="0">moins de 40000 USD</option>
+                                <option value="1">40000 USD - 60000 USD</option>High school
+                                <option value="2">60000 USD - 80000 USD</option>
+                                <option value="3">80000 USD - 120000 USD</option>
+                                <option value="4">Plus de 120000 USD</option>
+                                </select>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Catégorie de carte</span>
+                              <select name="catégorie"  class="a" style="color: rgb(118, 118, 118)" required>
+                                <option>Sélectioner la catégorie de la carte ici</option>
+                                <option value="0">Blue</option>
+                                <option value="1">Silver</option>High school
+                                <option value="2">Gold</option>
+                                <option value="3">Platinium</option>
+                                </select>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">taux moyen d'utilisation</span>
+                              <input type="text" name="utilisation" placeholder="Entrer le taux moyen d'utilisation de la carte ici" required>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Limite de credit</span>
+                              <input type="text" name="limite" placeholder="Entrer la limite de credit ici" required>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Entrer le genre ici</span>
+                              <select name="genre"  class="a" style="color: rgb(118, 118, 118)" required>
+                                <option>Sélectioner le genre ici</option>
+                                <option value="0">Femme</option>
+                                <option value="1">Homme</option>High school
+                                </select>
+                            </div>
+
+                            <br>
+                            <div class="buton">
+                              <input type="submit" class="b" value="Cliquez ici pour prédire">
+                            </div>
+
+
+          </form>
+
+
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</body>
+</html>

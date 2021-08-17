@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #b0dac5, #16201b);
+}
+
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #2d8604, #fdfbfd);
+}
+
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #83c981, #d8e4e0);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>predisez le futur statut de votre nouveau client ici</title>
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  border-size: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 70%;
+  padding: 30px 90px 90px 90px;
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  position: relative;
+  width: 55%;
+  height: 45%;
+  margin-left: 17%;
+  margin-top: 5%;
+  background-color: chocolate;
+}
+
+.card h2 {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.card .row {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid: auto / auto auto;
+  grid-template-columns: repeat(auto-fit,minmax(40%, 1fr));
+  grid-gap: 50px;
+  background-color: cadetblue;
+  height: 125%;
+}
+
+.card .row .col {
+  position: relative;
+  width: 100%;
+  margin: 20px 0px 40px 0;
+  transition: 0.5s;
+  background-color:burlywood;
+}
+
+.card .row .form-group {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+  margin-top: -15%;
+  background-color: brown;
+}
+
+.card .row .form-group input,
+.card .row .form-group textarea {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  font-size: 24px;
+  padding: 10px 0 10px 20px;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  border-radius: 50px;
+  background-color: cornflowerblue;
+  
+  
+}
+
+.card .row .form-group label {
+  line-height: 40px;
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 0 0 30px;
+  display: block;
+  pointer-events: none;
+  background-color: darkgreen;
+}
+
+.row .col:nth-child(6) {
+  margin-top: 64px;
+  background-color: hotpink;
+}
+
+.card .row .form-group input:focus,
+.card .row .form-group textarea:focus {
+  border: 5px solid #ffffff;
+  transition: all 0.5s;
+  background-color: saddlebrown;
+}
+
+.card .row input[type="submit"] {
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  height: 100%;
+  width: 150%;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 45px;
+  transition: all 0.4s;
+  background-color: black;
+  margin-top: 0%;
+  
+}
+
+.card .row input[type="submit"]:hover {
+  border: 5px solid rgba(255, 255, 255, 1);
+  color: #ffffff;
+  transition: all 0.4s;
+}
+
+@media screen and (max-width: 900px) {
+  .card .row {
+    grid-template-columns: repeat(auto-fit,minmax(70%, 1fr));
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .card h2 {
+    font-size: 34px;
+  }
+  
+  
+}
+
+
+.acceuil  {  
+    width: 100px;
+    height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-top: 0px;
+    display: flex;
+}
+
+.hyperspan2 {
+    position:absolute;
+    width:25%;
+    height:10%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.icone0 {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 50px;  
+}
+
+.defile {
+    position:absolute;
+    width:50%;
+    height:7%;
+    margin-left: 350px;
+    margin-top: -40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.déco {
+    color: white;
+    display: inline; 
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+.en-tête {
+    margin-top: 80px;
+    align-items: center;
+    background-color: royalblue;
+    opacity: 25%;
+    width: 1000px;
+    margin-left: 250px;
+    padding-top: 0px;
+}
+
+.texte1 {
+    font-size:50px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #ffffff;
+    opacity: 100%;
+}
+
+.texte0 {
+    font-size:20px;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 110px;
+    padding-top: 0px;
+    color: white;
+    opacity: 100%;
+    position: absolute;
+}
+
+  </style>
+
+</head>
+
+<body  class ="déco" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 45%)), url(./fond.jpg); background-size: cover;">
+
+  <div class="acceuil">
+    <a href="/">
+        <span class="hyperspan2"></span>
+        <img src="./acceuil.png" class="icone0">
+    </a>
+    <p class="texte0">Cliquez ici pour revenir à l'acceuil</p>
+</div>
+
+
+<div class="en-tête">
+    <p class="texte1">Prediser le futur statut d'un nouvel abonné ici</p>
+</div>
+
+
+<div class="defile">
+    <marquee behavior="scroll"  width="770" scrollamount="6" style="color: rgb(3, 248, 23);  background-color: rgba(228, 222, 222, 0.22); font-size: 40px;">Entrer les informations de votre nouveau client et verifier si celui-ci restera abonner au service de carte prépayé</marquee>
+</div>
+
+  <div class="card">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text">
+        </div>
+      </div>
+  
+      <div class="col">
+        <div class="form-group">
+          <label>Surname</label>
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label>Surname</label>
+          <input type="text">
+        </div>
+      </div>
+
+      
+  
+      <div class="col">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text">
+        </div>
+      </div>
+  
+      <div class="col">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text">
+        </div>
+      </div>
+  
+      <div class="col">
+        <div class="form-group">
+          <label>Message</label>
+          <textarea></textarea>
+        </div>
+      </div>
+  
+      <div class="col">
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prédiction_ciblée</title>
+
+<style>
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.user-details {
+  background-color: blue;
+  opacity: 25%;
+  width: 600px;
+  height: 415px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto, auto;
+  grid-template-rows: auto, auto;
+}
+
+.input-box {
+  margin-bottom: 15px;
+  position: relative;
+  width: 10%;
+  height: 40px;
+  color: #ffffff;
+  
+}
+
+.input-box input, 
+.input-box textarea {
+  
+}
+
+.texte0 {
+    font-size:20px;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 110px;
+    padding-top: 0px;
+    color: white;
+    opacity: 100%;
+    position: absolute;
+}
+
+.formulaire{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 45%;
+  height: 55%;
+  margin-left: 27%;
+  margin-top: 5%;
+  border-radius: 25%;
+  padding-top: 0px;
+  position: relative;
+}
+
+.déco {
+    color: white;
+    display: inline; 
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+.en-tête {
+    margin-top: 80px;
+    align-items: center;
+    background-color: royalblue;
+    opacity: 25%;
+    width: 1000px;
+    margin-left: 250px;
+    padding-top: 0px;
+}
+
+.texte1 {
+    font-size:50px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #ffffff;
+    opacity: 100%;
+}
+
+.defile {
+    position:absolute;
+    width:50%;
+    height:7%;
+    margin-left: 350px;
+    margin-top: -40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.acceuil  {  
+    width: 100px;
+    height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-top: 0px;
+    display: flex;
+}
+
+.hyperspan2 {
+    position:absolute;
+    width:25%;
+    height:10%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.icone0 {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 50px;  
+}
+
+.contenu {
+   
+    margin-top: 40px;
+    margin-left: 40px;
+    background-color:;
+    opacity: 100%;
+    height: 45px;
+    
+}
+
+.buton {
+    margin-left: 210px;
+    margin-top: 165px;
+}
+
+.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+
+}
+
+
+ 
+
+
+}
+
+</style>
+
+
+<link rel="stylesheet" href="">
+    
+</head>
+<body class ="déco" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 45%)), url(./fond.jpg); background-size: cover;">
+  
+    <div class="acceuil">
+        <a href="/">
+            <span class="hyperspan2"></span>
+            <img src="./acceuil.png" class="icone0">
+        </a>
+        <p class="texte0">Cliquez ici pour revenir à l'acceuil</p>
+    </div>
+
+
+    <div class="en-tête">
+        <p class="texte1">Prediser le futur statut d'un nouvel abonné ici</p>
+    </div>
+    
+
+    <div class="defile">
+        <marquee behavior="scroll"  width="770" scrollamount="6" style="color: rgb(3, 248, 23);  background-color: rgba(228, 222, 222, 0.22); font-size: 40px;">Entrer les informations de votre nouveau client et verifier si celui-ci restera abonner au service de carte prépayé</marquee>
+    </div>
+  
+  <div class="formulaire">
+    <div class="contenu">
+
+          <form action="{{url_for('predict')}}" method="POST"> 
+            
+                    <div class="user-details">
+                            <div class="input-box">
+                              <span class="details">âge</span>
+                              <input type="text" name="âge" placeholder="entrer l'âge ici" required>
+                            </div>
+
+
+                            <div class="input-box">
+                              <span class="details">Niveau d'étude</span>
+                              <select name="étude"  class="a"  style="color: rgb(118, 118, 118)"  required>
+                                <option>Sélectioner le niveau d'étude ici</option>
+                                <option value="0">Uneducated</option>
+                                <option value="1">College</option>High school
+                                <option value="2">High school</option>
+                                <option value="3">Graduate</option>
+                                <option value="4">Post-Graduate</option>
+                                <option value="5">Doctorate</option>
+                                </select>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Niveau de revenu</span>
+                              <select name="revenu"  class="a" style="color: rgb(118, 118, 118)" required>
+                                <option>Sélectioner le niveau de revenu ici</option>
+                                <option value="0">moins de 40000 USD</option>
+                                <option value="1">40000 USD - 60000 USD</option>High school
+                                <option value="2">60000 USD - 80000 USD</option>
+                                <option value="3">80000 USD - 120000 USD</option>
+                                <option value="4">Plus de 120000 USD</option>
+                                </select>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Catégorie de carte</span>
+                              <select name="catégorie"  class="a" style="color: rgb(118, 118, 118)" required>
+                                <option>Sélectioner la catégorie de la carte ici</option>
+                                <option value="0">Blue</option>
+                                <option value="1">Silver</option>High school
+                                <option value="2">Gold</option>
+                                <option value="3">Platinium</option>
+                                </select>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">taux moyen d'utilisation</span>
+                              <input type="text" name="utilisation" placeholder="Entrer le taux moyen d'utilisation de la carte ici" required>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Limite de credit</span>
+                              <input type="text" name="limite" placeholder="Entrer la limite de credit ici" required>
+                            </div>
+
+                            <div class="input-box">
+                              <span class="details">Entrer le genre ici</span>
+                              <select name="genre"  class="a" style="color: rgb(118, 118, 118)" required>
+                                <option>Sélectioner le genre ici</option>
+                                <option value="0">Femme</option>
+                                <option value="1">Homme</option>High school
+                                </select>
+                            </div>
+
+                            <br>
+                            <div class="buton">
+                              <input type="submit" class="b" value="Cliquez ici pour prédire">
+                            </div>
+                    </div>
+
+          </form>
+
+
+        
+     
+
+      
+    </div>
+
+  </div>
+</body>
+</html>

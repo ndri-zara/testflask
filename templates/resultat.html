@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>résultat de la prédiction</title>
+
+<style>
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.texte0 {
+    font-size:20px;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 110px;
+    padding-top: 0px;
+    color: white;
+    opacity: 100%;
+    position: absolute;
+}
+
+.déco {
+    color: white;
+    display: inline; 
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+.en-tête {
+    margin-top: -30px;
+    align-items: center;
+    width: 1000px;
+    margin-left: 250px;
+    padding-top: 0px;
+}
+
+.texte1 {
+    font-size:50px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #ffffff;
+    opacity: 70%;
+}
+
+.texte1:hover {
+    opacity: 100%;
+    color: rgb(188, 235, 21);
+
+}
+
+.defile {
+    position:absolute;
+    width:50%;
+    height:7%;
+    margin-left: 350px;
+    margin-top: -40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.acceuil  {  
+    width: 100px;
+    height: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-top: 0px;
+    display: flex;
+    opacity: 70%;
+    
+}
+
+.acceuil:hover {
+    opacity: 100%;
+    margin-left: 75px;
+}
+
+.hyperspan2 {
+    position:absolute;
+    width:25%;
+    height:10%;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.icone0 {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 50px;  
+}
+
+
+
+.contenu {
+   
+    margin-top: 40px;
+    margin-left: 40px;
+    background-color:;
+    opacity: 100%;
+    height: 45px; 
+    
+}
+
+.espace_resultat {
+  background-color: rgb(0, 0, 0, 0.5);
+  width: 70%;
+  height: 69%;
+  margin-left: 12%;
+  margin-top: 5%;
+  border-radius: 25%;
+  padding-top: 0px;
+  position: relative;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-template-columns: auto auto auto ;
+  grid-template-rows:auto auto;
+  grid-row-gap: 20px;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 15%;
+  width: 300px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 15%;
+  width: 400px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 270px;
+  grid-column-start:1 ;
+  grid-column-end:4;
+}
+
+.grid-item8 {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 5%;
+  width: 280px;
+  height: 90px;
+  margin-top: 30px;
+  margin-left: 330px;
+  grid-column-start:1 ;
+  grid-column-end:4;
+}
+
+.bouton {
+  background-color: rgb(219, 219, 219);
+  color: rgb(119, 119, 119);
+  width: 100%;
+  height: 85%;
+  border-radius: 15%;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  font-size: 50%;
+  text-align: center;
+}
+
+.renseignement:hover {
+  background-color: white;
+  border-color: rgb(228, 229, 230);
+}
+
+.details {
+  color: #ffffff;
+}
+
+input[type=text], select {
+          text-align: center;
+          text-align-last: center;
+}
+
+.texte_resultat {
+    text-align: center; 
+    font-size: 30px; 
+    color: rgb(255, 255, 255);
+    padding:10px;
+    font-family:cursive;
+    line-height: 2;
+}
+
+.esp_bouton {
+    width: 1075px;
+    height: 230px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    margin-top: -10px;
+    padding: 0%;
+    margin-top: -20px;
+
+}
+
+.bouton1 {
+    width: 400px;
+    height: 140px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: 60px;
+    margin-top: 30px;
+    color: rgb(119, 119, 119);
+    border-radius: 15%;
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+.bouton1:hover {
+    background-color: rgb(219, 219, 219, 0.6);
+    width: 430px;
+}
+
+.hyperspan3 {
+    position:absolute;
+    width:37.5%;
+    height:30%;
+    margin-left: 0px;
+    margin-top: 0px;
+    border-radius: 50px;
+}
+
+.icone1 {
+    width: 90px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.icone1:hover {
+    
+}
+
+.texte2 {
+    font-size:20px;
+    text-align: center;
+    margin-top: -50px;
+    margin-left: 110px;
+    padding-top: 0px;
+    color: white;
+    opacity: 100%;
+    position: absolute;
+}
+
+.emoji1 {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform:scaleX(90%) scaleY(90%) }
+   10% { transform: scaleX(100%) scaleY(100%) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform:scaleX(100%) scaleY(100%) }
+   30% { transform: scaleX(80%) scaleY(80%) }
+   40% { transform: scaleX(80%) scaleY(80%)}
+   50% { transform: scaleX(40%) scaleY(40%) }
+   60% { transform: scaleX(80%) scaleY(80%) }  /* Reset for the last half to pause */
+  100% { transform: scaleX(50%) scaleY(50%) }
+}
+
+.emoji2 {
+  animation-name: wave-animation2;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation2 {
+    0% { transform: rotateZ(0deg) }
+   10% { transform:  rotateZ(10deg)}  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotateZ(20deg) }
+   30% { transform:  rotateZ(0deg)}
+   40% { transform: rotateZ(-10deg)}
+   50% { transform:  }
+   60% { transform:  }  /* Reset for the last half to pause */
+  100% { transform:  }
+}
+
+.emoji3 {
+  animation-name: wave-animation3;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 3s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation3 {
+    0% { transform: translate(0px,0px)}
+   10% { transform:  translate(0px,40px)}  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(0deg) translate(200px,40px)}
+   35% { transform: rotate(10deg) translate(200px,40px)}
+   40% { transform: rotate(0deg) translate(200px,-40px)}
+   45% { transform: translate(200px,-40px)}
+   50% { transform: translate(0px,-40px)}
+   55% { transform: translate(0px,-40px)}
+   60% { transform: rotateZ(20deg)}  /* Reset for the last half to pause */
+   70% {transform: rotateZ(-20deg);}
+   80% { transform: rotateZ(20deg) }
+   90% {transform: rotateZ(-20deg);}
+   100% { transform: rotateZ(20deg) }
+}
+
+.emoji4 {
+  animation-name: wave-animation4;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation4 {
+    0% { transform: skew(0deg) }
+   10% { transform:  skew(10deg)}  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: scale(150%) skew(30deg) }
+   30% { transform: scale(100%) skew(0deg)}
+   40% { transform: scale(150%) skew(-30deg)}
+   50% { transform: scale(150%) skew(30deg) }
+   80% { transform: scale(100%) skew(0deg)}
+   100% { transform: scale(150%) skew(-30deg)}
+}
+
+.te {
+  color: rgb(9, 255, 0);
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 2s c;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.te2 {
+  color: rgb(255, 0, 0);
+  animation: fadeIn linear 0.5s;
+  -webkit-animation: fadeIn linear 2s c;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+icone1:hover {
+    opacity: 0%;
+}
+
+
+.forme{
+    width: 200px;
+    height: 100px;
+    margin-left: 1335px;
+    margin-top: -50px;
+	border-radius: 5% 0% 4% 94%;
+}
+
+
+
+.i {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.hyperspan4 {
+    position:absolute;
+    background-color: rgba(228, 230, 139, 0.5);
+    border-radius: 5% 0% 4% 94%;
+    width: 210px;
+    height: 160px;
+    margin-left: -10px;
+    margin-top: -50px;
+
+}
+
+.hyperspan4:hover {
+    background-color: rgba(77, 62, 158, 0.4);
+    margin-left: -10px;
+    width: 210px;
+}
+</style>
+
+
+<link rel="stylesheet" href="">
+    
+</head>
+<body class ="déco" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 45%)), url(../static/image/fonds.jpg); background-size: cover;">
+  
+                          <div class="acceuil">
+                              <a href="/">
+                                  <span class="hyperspan2"></span>
+                                  <img src="../static/image/acceuil.png" class="icone0">
+                              </a>
+                              <p class="texte0">Cliquez ici pour revenir à l'acceuil</p>
+                          </div>
+                          <div class="forme"> <a href="/"> <span class="hyperspan4"></span> </a> <p class="i">i</p>  </div>
+
+
+                          <div class="en-tête">
+                              <p class="texte1">RESULTAT DE VOTRE PREDICTION ICI</p>
+                          </div>
+                          
+
+                          <div class="defile">
+                              <marquee behavior="scroll"  width="770" scrollamount="6" style="color: rgb(192, 22, 79);  background-color: rgba(228, 222, 222, 0.22); font-size: 40px; border:5px solid rgb(165, 165, 165)"> "CHUNK BANK c'est 97% de précision"  "CHUNK BANK viens pour optimiser la gestion de la relation client"</marquee>
+                          </div>
+
+                        
+                          
+     <div class="espace_resultat">
+
+     
+
+        {% if my_prediction==['0'] %}
+
+
+         <p class="texte_resultat"> <span class="emoji1"> &#129302 </span> <span class="te"> RESTEZ SEREIN... </span> <span class="emoji2"> &#128526 </span><br> <br> <span class="tex"> Votre nouveau client restera abonner à sa carte prepayée </span> </p>
+
+         {% else %}
+
+         <p class="texte_resultat"> <span class="emoji3"> &#129302 </span> <span class="te2"> OUPS!!! </span> <span class="emoji4"> &#128545 </span><br> <br> <span class="tex"> Votre nouveau client ne restera pas abonner à sa carte prepayée. Definissez vite une stratégie marketing pour le retenir. </span> </p>
+         
+
+         {% endif %}
+
+         <p class="info" style="margin-top: -20px; text-align: center;  background-color: rgb(82, 76, 76);      width: 900px;         margin-left: 100px;">Ce client est <span style="color: rgb(188, 235, 21);"> {% if genre==1 %} <span>masculin</span> {% else %} <span class="inf">feminin</span> {% endif %} </span>, a <span style="color: rgb(188, 235, 21);"> {{âge}} </span>ans, a un niveau d'étude de <span style="color: rgb(188, 235, 21);"> {% if étude==0 %} <span>uneducated</span> {% elif étude==1 %} <span>college</span> {% elif étude==2 %} <span>high-school</span> {% elif étude==3 %} <span>graduate</span> {% elif étude==4 %} <span>post-graduate</span> {% elif étude==5 %} <span>doctorate</span> {% endif %} </span> et un niveau de revenu de  <span style="color: rgb(188, 235, 21);"> {{revenu}} </span>. Outre il a une carte prépayée de la catégorie  <span style="color: rgb(188, 235, 21);"> {% if catégorie==0 %} <span>blue</span> {% elif catégorie==1 %} <span>silver</span> {% elif catégorie==2 %} <span>gold</span> {% elif catégorie==3 %}  <span>platinium</span> {% endif %} </span> avec une limite de credit de  <span style="color: rgb(188, 235, 21);"> {{limite}} </span> et un taux moyen d'utilisation de  <span style="color: rgb(188, 235, 21);"> {{utilisation}} </span>  </p> 
+
+     <div class="esp_bouton">
+         <div class="bouton1">
+            <a href="/">
+                <span class="hyperspan3"></span>
+                <img src="../static/image/acceuil.png" class="icone1">
+            </a>
+            <p class="texte2">Cliquez ici pour revenir à l'acceuil</p>
+         </div>
+         <div class="bouton1">
+            <a href="/quatrième">
+                <span class="hyperspan3"></span>
+                <img src="../static/image/bon.png" class="icone1">
+            </a>
+            <p class="texte2">Cliquez ici pour predire un autre</p>
+         </div>
+     </div>
+     </div>
+</body>
+</html>

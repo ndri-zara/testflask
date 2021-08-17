@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page d'acceuil</title>
+<style>
+
+.defile {
+    position:absolute;
+    width:50%;
+    height:7%;
+    margin-left: 350px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.icone0 {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 50px;
+    opacity: 70%; 
+}
+
+.icone0:hover {
+    opacity: 100%;
+}
+
+
+
+.hyperspan2 {
+    position:absolute;
+    width:13%;
+    height:10%;
+    margin-left: 40px;
+    margin-top: 10px;
+    opacity: 0%;
+    background-color: blue;
+}
+
+.texte0 {
+    font-size:20px;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 110px;
+    padding-top: 0px;
+    color: white;
+    opacity: 100%;
+    position:absolute;
+    opacity: 70%;
+}
+
+.texte0:hover {
+    opacity: 100%;
+}
+
+.logo1 {
+    height: 250px;
+    width: 800px;
+    margin-left: 20%;
+    margin-top: -230px;
+    opacity: 70%;
+}
+
+.logo1:hover {
+    opacity: 100%;
+}
+
+.acceuil:hover {
+    margin-left: 75px;
+    opacity: 100%;
+}
+
+,
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.hyperspan {
+    position:absolute;
+    width:19.5%;
+    height:33.5%;
+    margin-left: 0px;
+    opacity: 25%;
+}
+
+
+.nav {
+    background-color: rgba(75, 72, 72, 0.62);
+    width: 300px;
+    height: 250px;
+    margin-left: 80px;
+    margin-top: 60px;
+    border-color: rgba(255, 255, 255, 0.52);
+    border-radius: 60px;
+}
+
+
+
+.opacity {
+    opacity: 100%;
+}
+
+.nav2 {
+    background-color: rgba(75, 72, 72, 0.62);
+    width: 300px;
+    height: 250px;
+    margin-top: 60px;
+    margin-left: -20px;
+    border-style: solid;
+    border-width: 0px 0px;
+    border-color: rgba(255, 255, 255, 0.52);
+    border-radius: 30%;
+}
+
+.nav:hover, .nav2:hover, .nav3:hover {
+    cursor: pointer;
+    background-color: rgba(228, 227, 227,0.5) ;
+    margin-top: 90px;
+    
+}
+
+
+.nav3 {
+    background-color: rgba(75, 72, 72, 0.62);
+    width: 300px;
+    height: 250px;
+    margin-top: 60px;
+    margin-left: -20px;
+    border-style: solid;
+    border-width: 0px 0px;
+    border-color: rgba(255, 255, 255, 0.52);
+    border-radius: 60px;
+}
+
+
+.en-tête {
+    margin-top: 150px;
+    align-items: center;
+}
+
+.disposition {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    margin-left: 0px;
+    grid-column-gap: 0px;
+}
+
+.texte1 {
+    font-size:30px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #e4d912;
+    opacity: 100%;
+}
+
+.texte2 {
+    font-size:22px;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 10px;
+    color: white;
+    opacity: 100%;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size:110px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: -150px;
+    padding-top: 0px;
+    color: rgb(228, 227, 227);
+    opacity: 100%;
+    
+}
+
+.icone1 {
+    width: 200px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.icone2 {
+    width:200px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.icone3 {
+    width:150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.corps {
+   
+}
+
+.déco {
+    color: white;
+    display: inline; 
+    background-size: cover;
+    background-repeat: no-repeat;  
+}
+
+
+       
+.acceuil  {  
+    width: 100px;
+    height: 150px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-top: 15px;
+    display: flex;
+}
+
+.defile {
+    position:absolute;
+    width:50%;
+    height:7%;
+    margin-left: 350px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.logo1 {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform:scaleX(100%) scaleY(100%) }
+   35% { transform: scaleX(80%) scaleY(80%) }  /* The following five values can be played with to make the waving more or less extreme */
+   50% { transform:scaleX(100%) scaleY(100%) }
+   100% { transform: scaleX(100%) scaleY(100%) }
+}
+
+
+.forme{
+    width: 200px;
+    height: 100px;
+    margin-left: 1335px;
+    margin-top: -50px;
+	border-radius: 5% 0% 4% 94%;
+}
+
+
+.i {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 40px;
+    margin-top: -140px;
+}
+
+.hyperspan4 {
+    position:absolute;
+    background-color: rgba(228, 230, 139, 0.5);
+    border-radius: 5% 0% 4% 94%;
+    width: 210px;
+    height: 160px;
+    margin-left: -10px;
+    margin-top: -50px;
+
+}
+
+.hyperspan4:hover {
+    background-color: rgba(77, 62, 158, 0.4);
+    margin-left: -10px;
+    width: 210px;
+}
+
+</style>
+
+</head>
+
+
+<body class ="déco" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.70)), url(./static/image/fonds.jpg);">
+
+    <div class="corps">
+
+        <div class="acceuil">
+            <a href="/">
+                <span class="hyperspan2"></span>
+                <img src="./static/image/acceuil.png" class="icone0">
+            </a>
+            <p class="texte0">Page d'acceuil</p>
+        </div>
+        <div class="forme"> <a href="/"> <span class="hyperspan4"></span> </a> <p class="i">i</p>  </div>
+
+        
+
+        <div class="en-tête">
+            <img src="../static/image/logo1.png" class="logo1">
+            <p class="texte1">votre application vous permettant de gerer les abonnés à votre 
+            service de carte prepayée</p>
+        </div>
+
+                <div class="defile">
+
+
+
+                     <marquee class="a" behavior="scroll"  width="770" scrollamount="6" style="color: rgb(3, 248, 23);  background-color: rgba(228, 222, 222, 0.22); font-size: 40px; border:5px solid rgb(165, 165, 165); margin-top: -2%; border-radius: 50px;">"L'intélligence artificielle indispensable pour la digitalisation de votre entreprise"         "Chunk bank c'est 97% de précision dans la prédiction"          "vous voulez une application comme Chunk bank n'attendez plus contactez le 00225 0709107390 maintenant"</marquee>
+                 </div>
+
+
+        <div class="disposition"> 
+    
+            
+            <div class="nav">
+                
+                <a href="/quatrième" class="opacity"> 
+                    <span class="hyperspan"></span>
+                    <img src="./static/image/bon.png" class="icone1">
+                </a>   
+                <p class="texte2">prédire si votre nouveau client restera abonner ici</p>
+                
+            </div>
+
+            <div class="nav2">
+                <a href="/troisième"> 
+                    <span class="hyperspan"></span>
+                    <img src="./static/image/deux.png" class="icone2">
+                </a>   
+                <p class="texte2">afficher le statut prédit de 10 clients aléatoirement ici</p>
+            </div>
+
+            <div class="nav3">
+                <a href="/second"> 
+                    <span class="hyperspan"></span>
+                    <img src="./static/image/base.png" class="icone3">
+                </a>   
+                <p class="texte2">afficher la base de donnée d'entrainement ici</p>
+            </div>
+
+            <div class="nav3">
+                <a href="/cinq"> 
+                    <span class="hyperspan"></span>
+                    <img src="./static/image/plus.png" class="icone3">
+                </a>   
+                <p class="texte2">charger votre propre base de donnée ici</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
